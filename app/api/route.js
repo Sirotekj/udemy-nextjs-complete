@@ -1,4 +1,4 @@
-// ROUTE HANDLER (GET, POST, PUT, PATCH, DELETE)
+// ROUT HANDLER (GET, POST, PUT, PATCH, DELETE)
 
 export function GET(request) {
   console.log(request);
