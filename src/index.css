@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* https://grabient.com/HQdgLAbANKkwnPAzFAtABmAJnQRhruumpocRsGDiZVtBZGDOgKwsw4g1ZVA?angle=45 */
+  /* https://grabient.com/HQJgnArANKk+1gGYIBYZKQdg0kMA2ARiJggA5yywCpVgwskojhyQqlgtig */
+
+  background: linear-gradient(
+    90deg,
+    #73a09d 0%,
+    #3b899a 25%,
+    #095b79 50%,
+    #002847 75%,
+    #000116 100%
+  );
+
+  & > div main {
+    margin: auto;
+    max-width: 640px;
+    padding: 32px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
