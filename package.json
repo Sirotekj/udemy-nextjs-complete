@@ -1,5 +1,5 @@
 {
-  "name": "foodies",
+  "name": "routing-rendering",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "better-sqlite3": "^12.6.2",
-    "next": "^14.2.35",
+    "better-sqlite3": "^12.8.0",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "slugify": "^1.6.6",
-    "xss": "^1.0.15"
-  },
-  "devDependencies": {
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.6"
+    "slugify": "^1.6.6"
   }
 }
