@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             action: newPostAction,
           },
           {
-            path: '/:postId',
+            path: '/:postId', //dynamic route
             element: <PostDetails />,
             loader: postDetailsLoader,
           },

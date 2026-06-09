@@ -29,10 +29,11 @@ function NewPost() {
 export default NewPost;
 
 export async function action({ request }: ActionFunctionArgs) {
+  //(data)
   //data.request
   const formData = await request.formData();
   //formData.get("body");
-  const postData = Object.fromEntries(formData);
+  const postData = Object.fromEntries(formData); // { body: "...", author: "..."}
   await fetch('http://localhost:8080/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
