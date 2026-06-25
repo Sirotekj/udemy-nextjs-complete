@@ -1,17 +1,11 @@
-import Link from 'next/link';
+import { getFeaturedEvents } from '../data/dummy-data';
+import EventList from '../components/events/event-list';
+
 function HomePage() {
+  const featuredEvents = getFeaturedEvents();
   return (
     <div>
-      <h1>The Home Page</h1>
-      <ul>
-        <li>
-          {/*<a href="/portfolio">Portfolio</a>New request > lost app states even with redux*/}
-          <Link href="/portfolio">Portfolio</Link>
-        </li>
-        <li>
-          <Link href="/clients">Clients</Link>
-        </li>
-      </ul>
+      <EventList items={featuredEvents} />
     </div>
   );
 }

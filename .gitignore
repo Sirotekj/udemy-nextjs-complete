@@ -19,7 +19,7 @@
 .DS_Store
 *.pem
 
-#sources
+# Sources
 /Sources
 
 # debug
