@@ -1,53 +1,19 @@
+import Head from 'next/head';
+
 import { getFeaturedEvents } from '../helpers/api-util';
-import { useState, useEffect } from 'react';
-import useSWR from 'swr';
 import EventList from '../components/events/event-list';
-import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
-
-{
-  /*function HomePage(props) {
-  //const featuredEvents = getFeaturedEvents(props);
-  const [featuredEvents, setFeaturedEvents] = useState(props.events);
-  const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error } = useSWR(
-    'https://udemy-nextjs-complete-default-rtdb.firebaseio.com/sales.json',
-    fetcher,
-  );
-
-  if (error) {
-    return <p>Failed to load.</p>;
-  }
-
-  if (!data && !featuredEvents) {
-    return <p>Loading...</p>;
-  }
-
-  useEffect(() => {
-    const transformedEvents = [];
-    if (data) {
-      for (const key in data) {
-        transformedEvents.push({
-          id: key,
-          username: data[key].username,
-          volume: data[key].volume,
-        });
-      }
-      setFeaturedEvents(transformedEvents);
-    }
-  }, [data]);
-
-  return (
-    <div>
-      <EventList items={featuredEvents} />
-    </div>
-  );
-}*/
-}
 
 function HomePage(props) {
   const featuredEvents = getFeaturedEvents();
   return (
     <div>
+      <Head>
+        <title>NextJS Events</title>
+        <meta
+          name="description"
+          content="Find a lot of great events that allow you to evolve..."
+        />
+      </Head>
       <EventList items={props.events} />
     </div>
   );
